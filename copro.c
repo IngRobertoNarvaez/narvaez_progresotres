@@ -22,14 +22,24 @@ int main(int argc, char const *argv[])
     switch (opcion)
     {
     case 1:
-        printf("Ingrese codigo del producto: ");
-        scanf("%s", datosproductos.codigo);
-        printf("Ingrese Nombre del producto: ");
-        scanf("%s", datosproductos.nombreproducto);
-        printf("Ingrese descripcion del producto: ");
-        scanf("%s", datosproductos.descripcion);
-        printf("Ingrese codigo del producto: ");
-        scanf("%f", datosproductos.cantidadproducto);
+        int numerodeproductos;
+        printf("Ingrese el numero de productos que va a ingresar : ");
+        scanf("%d", &numerodeproductos);
+        for (int i = 0; i < numerodeproductos; i++)
+        {
+            printf("\n");
+            printf("Ingrese codigo del producto: ");
+            scanf("%s", datosproductos.codigo);
+            printf("Ingrese Nombre del producto: ");
+            scanf("%s", datosproductos.nombreproducto);
+            printf("Ingrese descripcion del producto: ");
+            scanf("%s", datosproductos.descripcion);
+            printf("Ingrese cantidad del producto: ");
+            scanf("%d", &datosproductos.cantidadproducto);
+            printf("Ingrese precio del producto: ");
+            scanf("%d", &datosproductos.preciodecompra);
+        }
+
         break;
     case 2:
         /* code */
