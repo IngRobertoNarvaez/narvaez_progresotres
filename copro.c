@@ -8,27 +8,37 @@ struct productos
     int cantidadproducto;
     float preciodecompra;
 };
+struct productos datosproductos;
 int main(int argc, char const *argv[])
 {
     /*Estructura incio del menu*/
-    int seleccion;
+    int opcion;
     printf("Menu de la Tienda UPLO\n");
     printf("  1) Ingreso de Datos nuevos \n");
     printf("  2) Mostrar datos \n");
     printf("  3) Salir \n");
-    switch (seleccion)
+    scanf("%d", &opcion);
+
+    switch (opcion)
     {
     case 1:
-        /* code */
+        printf("Ingrese codigo del producto: ");
+        scanf("%s", datosproductos.codigo);
+        printf("Ingrese Nombre del producto: ");
+        scanf("%s", datosproductos.nombreproducto);
+        printf("Ingrese descripcion del producto: ");
+        scanf("%s", datosproductos.descripcion);
+        printf("Ingrese codigo del producto: ");
+        scanf("%f", datosproductos.cantidadproducto);
         break;
     case 2:
         /* code */
         break;
     case 3:
-        /* code */
+        printf("Saliendo de tienda UPLO...\n");
         break;
     default:
-        printf("Opción invalida.\n");
+        printf("Opcion invalida.\n");
         break;
     }
     return 0;
